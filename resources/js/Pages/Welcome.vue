@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <title>Transportes SCAR - Tu carga, nuestra misión</title>
+    <title>Tu carga, nuestra misión</title>
     <meta
       name="description"
       content="Transportes SCAR, con más de 25 años de experiencia, ofrece soluciones de transporte de carga seguras, eficientes y sostenibles en Chile."
@@ -11,7 +11,7 @@
     <!-- HEADER -->
     <header class="absolute inset-x-0 top-0 z-50">
       <nav
-        class="mx-4 mt-4 flex items-center justify-between rounded-2xl bg-gray-900 p-4 shadow-lg lg:px-6 relative overflow-visible"
+        class="mx-4 mt-4 flex items-center justify-between rounded-2xl bg-gray-900 p-4 shadow-lg lg:px-2 relative overflow-visible"
         aria-label="Menú principal"
       >
         <!-- Logo (alineado a la izquierda) -->
@@ -20,7 +20,7 @@
             <span class="sr-only">Transportes SCAR</span>
             <!-- Ajusta el tamaño y márgenes para que sobresalga de la barra -->
             <img
-              class="h-28 w-auto relative z-10 -mb-20 -mt-4"
+              class="h-20 w-auto relative z-10 -mb-12 -mt-10 -mx-2"
               src="img/logoscar.png"
               alt="Logo de Transportes SCAR"
             />
@@ -52,7 +52,7 @@
         </div>
 
         <!-- Botones de Login/Registro (versión escritorio) -->
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end space-x-4" v-if="canLogin">
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end mx-8 space-x-4" v-if="canLogin">
           <Link
             :href="route('login')"
             class="text-sm font-semibold text-white hover:text-indigo-300"
@@ -83,7 +83,7 @@
     <div class="flex items-center justify-between">
       <a href="#inicio" class="p-1" aria-label="Inicio">
         <span class="sr-only">Transportes SCAR</span>
-        <img class="h-28 w-auto" src="img/logoscar.png" alt="Logo de Transportes SCAR" />
+        <img class="h-16 w-auto" src="img/logoscar.png" alt="Logo de Transportes SCAR" />
       </a>
       <button
         type="button"
@@ -137,7 +137,7 @@
     <!-- MAIN CONTENT -->
     <main>
       <!-- HERO SECTION -->
-      <section id="inicio" class="pt-24 sm:pt-30 pb-16 sm:pb-2 max-w-7xl mx-auto px-6 lg:px-4">
+      <section id="inicio" class="pt-20 sm:pt-30 pb-16 sm:pb-2 max-w-7xl mx-auto px-4 lg:px-4">
         <div class="relative overflow-hidden rounded-2xl bg-gray-900 px-6 py-20 shadow-xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
           <img
             class="absolute inset-0 h-full w-full object-cover brightness-90 saturate-100"
@@ -173,28 +173,25 @@
       </section>
 
       <!-- CLIENTES ACTUALIZADO -->
-      <section id="clientes" class="bg-gray-50 pt-4 sm:pt-6 lg:pt-8 pb-12 sm:pb-16 lg:pb-20">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <p class="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
-      Nuestros Clientes
-    </p>
+<section id="clientes" class="bg-gray-50 pt-2 sm:pt-2 lg:pt-4 pb-8 sm:pb-10 lg:pb-10">
+  <div class="max-w-7xl mx-auto px-0 py-0 lg:px-20">
     <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-center">
 
       <!-- Línea 1 -->
       <div class="flex justify-center items-center">
-        <img class="h-10 object-contain saturate-75" src="/img/latam.png" alt="Latam" loading="lazy" />
+        <img class="h-8 object-contain saturate-75" src="/img/latam.png" alt="Latam" loading="lazy" />
       </div>
       <div class="flex justify-center items-center">
-        <img class="h-12 object-contain saturate-75" src="/img/dashboard/essity.svg" alt="Essity" loading="lazy" />
+        <img class="h-8 object-contain saturate-75" src="/img/dashboard/essity.svg" alt="Essity" loading="lazy" />
       </div>
       <div class="flex justify-center items-center">
         <img class="h-10 object-contain saturate-75" src="/img/ripley.png" alt="Ripley" loading="lazy" />
       </div>
       <div class="flex justify-center items-center">
-        <img class="h-10 object-contain saturate-75" src="/img/walmart.png" alt="Walmart" loading="lazy" />
+        <img class="h-8 object-contain saturate-75" src="/img/walmart.png" alt="Walmart" loading="lazy" />
       </div>
       <div class="flex justify-center items-center">
-        <img class="h-12 object-contain saturate-75" src="/img/dashboard/deco.png" alt="Deco Muebles" loading="lazy" />
+        <img class="h-8 object-contain saturate-75" src="/img/dashboard/deco.png" alt="Deco Muebles" loading="lazy" />
       </div>
 
       <!-- Línea 2 -->
@@ -205,7 +202,7 @@
         <img class="h-12 object-contain saturate-75" src="/img/dashboard/fibox.png" alt="Fibox" loading="lazy" />
       </div>
       <div class="flex justify-center items-center">
-        <img class="h-10 object-contain saturate-75" src="/img/tottus.png" alt="Tottus" loading="lazy" />
+        <img class="h-6 object-contain saturate-75" src="/img/tottus.png" alt="Tottus" loading="lazy" />
       </div>
       <div class="flex justify-center items-center">
         <img class="h-12 object-contain saturate-75" src="/img/dashboard/falabella.png" alt="Falabella" loading="lazy" />
@@ -216,27 +213,27 @@
 
       <!-- Línea 3 -->
       <div class="flex justify-center items-center">
-        <img class="h-12 object-contain saturate-75" src="/img/dashboard/canontex.png" alt="Canontex" loading="lazy" />
+        <img class="h-6 object-contain saturate-75" src="/img/dashboard/canontex.png" alt="Canontex" loading="lazy" />
       </div>
       <div class="flex justify-center items-center">
-        <img class="h-10 object-contain saturate-75" src="/img/paris.png" alt="Paris" loading="lazy" />
+        <img class="h-8 object-contain saturate-75" src="/img/paris.png" alt="Paris" loading="lazy" />
       </div>
       <div class="flex justify-center items-center">
-        <img class="h-14 object-contain saturate-75" src="/img/dashboard/geo.png" alt="Geoprospec" loading="lazy" />
+        <img class="h-16 object-contain saturate-75" src="/img/dashboard/geo.png" alt="Geoprospec" loading="lazy" />
       </div>
       <div class="flex justify-center items-center">
-        <img class="h-14 object-contain saturate-75" src="/img/contrumart.jpeg" alt="Construmart" loading="lazy" />
+        <img class="h-16 object-contain saturate-75" src="/img/contrumart.jpeg" alt="Construmart" loading="lazy" />
       </div>
       <div class="flex justify-center items-center">
-        <img class="h-12 object-contain saturate-75" src="/img/tecnopapel.png" alt="Tecnopapel" loading="lazy" />
+        <img class="h-8 object-contain saturate-75" src="/img/tecnopapel.png" alt="Tecnopapel" loading="lazy" />
       </div>
-
     </div>
   </div>
-      </section>
+</section>
+
 
       <!-- PANORAMA LOGÍSTICO -->
-      <section id="panorama-logistico" class="bg-white py-12">
+      <section id="panorama-logistico" class="bg-white py-6">
   <div class="mx-auto max-w-4xl text-center">
     <p class="text-4xl font-bold tracking-tight text-gray-900">
       Panorama Logístico
