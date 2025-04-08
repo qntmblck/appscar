@@ -150,7 +150,7 @@
               Llevamos tu carga a todo Chile
             </h1>
             <p class="mt-6 text-base sm:text-lg leading-7 text-gray-300">
-              Con más de 25 años de experiencia en transporte terrestre, Transportes CAR garantiza seguridad, eficiencia y cumplimiento en cada ruta.
+              Con más de 25 años de experiencia en transporte terrestre, Transportes SCAR garantiza seguridad, eficiencia y cumplimiento en cada ruta.
             </p>
             <div class="mt-10 flex justify-center gap-x-6">
               <a
