@@ -1,4 +1,5 @@
 <template>
+  
   <Head>
     <title>Tu carga, nuestra misión</title>
     <meta
@@ -133,6 +134,7 @@
     </header>
 
     <!-- MAIN CONTENT -->
+     
     <main>
       <!-- HERO SECTION -->
 <section id="inicio" class="pt-20 sm:pt-30 pb-16 sm:pb-2">
@@ -351,6 +353,67 @@
   </div>
       </section>
 
+      <!-- CTA SECTION -->
+<section class="relative isolate mt-0 px-6 py-0 sm:py-16 lg:px-8 bg-gray-900">
+  <svg
+    class="absolute inset-0 -z-10 w-full h-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+    aria-hidden="true"
+  >
+    <defs>
+      <pattern
+        id="1d4240dd-898f-445f-932d-e2872fd12de3"
+        width="200"
+        height="200"
+        x="50%"
+        y="0"
+        patternUnits="userSpaceOnUse"
+      >
+        <path d="M.5 200V.5H200" fill="none" />
+      </pattern>
+    </defs>
+    <svg x="50%" y="0" class="overflow-visible fill-gray-800/20">
+      <path
+        d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
+        stroke-width="0"
+      />
+    </svg>
+    <rect width="100%" height="100%" stroke-width="0" fill="url(#1d4240dd-898f-445f-932d-e2872fd12de3)" />
+  </svg>
+  <div
+    class="absolute inset-x-0 top-10 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
+    aria-hidden="true"
+  >
+    <div
+      class="aspect-[1108/632] w-[69.25rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20"
+      style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"
+    ></div>
+  </div>
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="text-4xl font-bold tracking-tight text-white">
+      Transportes SCAR: Liderando el transporte de carga en Chile
+    </h2>
+    <p class="mx-auto mt-6 max-w-xl text-lg text-gray-300">
+      Con inversiones en tecnología avanzada y una estrategia de mejora continua, optimizamos procesos, reducimos costos operativos y garantizamos entregas puntuales con la máxima seguridad.
+    </p>
+    <div class="mt-10 flex items-center justify-center gap-x-6">
+      <a
+        href="#contacto"
+        class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        aria-label="Alianza Transportes"
+      >
+        Alianza Transportes
+      </a>
+      <Link
+        :href="route('register')"
+        class="text-sm font-semibold text-white"
+        aria-label="Conduce con Nosotros"
+      >
+        Conduce con Nosotros <span aria-hidden="true">→</span>
+      </Link>
+    </div>
+  </div>
+</section>
+
       <!-- ESTADÍSTICAS Y COMPROMISO -->
       <section class="bg-gray-100 py-12">
   <div class="mx-auto max-w-4xl text-center">
@@ -372,88 +435,138 @@
   </dl>
       </section>
 
-      <!-- CTA SECTION -->
-      <section class="relative isolate mt-16 px-6 py-24 sm:py-32 lg:px-8 bg-gray-900">
-        <svg
-          class="absolute inset-0 -z-10 w-full h-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-          aria-hidden="true"
-        >
-          <defs>
-            <pattern
-              id="1d4240dd-898f-445f-932d-e2872fd12de3"
-              width="200"
-              height="200"
-              x="50%"
-              y="0"
-              patternUnits="userSpaceOnUse"
-            >
-              <path d="M.5 200V.5H200" fill="none" />
-            </pattern>
-          </defs>
-          <svg x="50%" y="0" class="overflow-visible fill-gray-800/20">
-            <path
-              d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-              stroke-width="0"
-            />
-          </svg>
-          <rect width="100%" height="100%" stroke-width="0" fill="url(#1d4240dd-898f-445f-932d-e2872fd12de3)" />
-        </svg>
-        <div
-          class="absolute inset-x-0 top-10 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
-          aria-hidden="true"
-        >
-          <div
-            class="aspect-[1108/632] w-[69.25rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20"
-            style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"
-          ></div>
-        </div>
-        <div class="mx-auto max-w-2xl text-center">
-          <h2 class="text-4xl font-bold tracking-tight text-white">
-            Transportes SCAR: Liderando el transporte de carga en Chile
-          </h2>
-          <p class="mx-auto mt-6 max-w-xl text-lg text-gray-300">
-            Con inversiones en tecnología avanzada y una estrategia de mejora continua, optimizamos procesos, reducimos costos operativos y garantizamos entregas puntuales con la máxima seguridad.
-          </p>
-          <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#contacto"
-              class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              aria-label="Alianza Transportes"
-            >
-              Alianza Transportes
-            </a>
-            <Link
-              :href="route('register')"
-              class="text-sm font-semibold text-white"
-              aria-label="Conduce con Nosotros"
-            >
-              Conduce con Nosotros <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
+      
+
     </main>
 
-    <!-- FOOTER DEFINITIVO -->
-      <footer id="contacto" class="mx-auto max-w-7xl px-6 lg:px-8">
-  <div class="border-t border-gray-900/10 py-12 md:flex md:items-center md:justify-between">
-    <div class="flex justify-center gap-x-6 md:order-2">
-      <a
-        v-for="item in footerSocial"
-        :key="item.name"
-        :href="item.href"
-        class="text-gray-400 hover:text-gray-300"
-        aria-label="Ir a {{ item.name }}"
-      >
-        <span class="sr-only">{{ item.name }}</span>
-        <component :is="item.icon" aria-hidden="true" class="h-6 w-6" />
-      </a>
+    <!-- Footer SCAR -->
+<footer class="bg-gray-900">
+  <div class="mx-auto max-w-7xl px-6 pb-8 pt-12 sm:pt-24 lg:px-8 lg:pt-16">
+    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+      <img class="h-16" src="/img/logoscar.png" alt="Transportes SCAR" />
+      <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          <div>
+            <h3 class="text-sm font-semibold text-white">SCAR</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              <li>
+                <a href="#sobre-nosotros" class="text-sm text-gray-400 hover:text-white">
+                  Nuestra Historia
+                </a>
+              </li>
+              <li>
+                <a href="#servicios" class="text-sm text-gray-400 hover:text-white">
+                  Servicios de Transporte
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm font-semibold text-white">Soporte</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              <li>
+                <a href="#compromiso" class="text-sm text-gray-400 hover:text-white">
+                  Compromisos y Alianzas
+                </a>
+              </li>
+              <li>
+                <a href="#contacto" class="text-sm text-gray-400 hover:text-white">
+                  Contáctanos
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          <div>
+            <h3 class="text-sm font-semibold text-white">Clientes</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              <li>
+                <a href="#clientes" class="text-sm text-gray-400 hover:text-white">
+                  Empresas que confían
+                </a>
+              </li>
+              <li>
+                <a href="#panorama-logistico" class="text-sm text-gray-400 hover:text-white">
+                  Panorama Logístico
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-10 md:mt-0">
+            <h3 class="text-sm font-semibold text-white">Legal</h3>
+            <ul role="list" class="mt-6 space-y-4">
+              <li>
+                <a href="#" class="text-sm text-gray-400 hover:text-white">
+                  Términos y Condiciones
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-sm text-gray-400 hover:text-white">
+                  Política de Privacidad
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <p class="mt-8 text-center text-sm text-gray-400 md:order-1 md:mt-0">
-      &copy; 2024 Transportes SCAR. Todos los derechos reservados.
-    </p>
+
+    <!-- Newsletter -->
+    <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 lg:flex lg:items-center lg:justify-between">
+      <div>
+        <h3 class="text-sm font-semibold text-white">Suscríbete al boletín</h3>
+        <p class="mt-2 text-sm text-gray-300">
+          Recibe noticias, actualizaciones y novedades de Transportes SCAR.
+        </p>
+      </div>
+      <form class="mt-6 sm:flex sm:max-w-md lg:mt-0">
+        <label for="email-address" class="sr-only">Correo electrónico</label>
+        <input
+          type="email"
+          name="email-address"
+          id="email-address"
+          autocomplete="email"
+          required
+          class="w-full rounded-md bg-white/5 px-3 py-1.5 text-white placeholder:text-gray-500 outline outline-1 outline-white/10 focus:outline-2 focus:outline-indigo-500 sm:w-56 sm:text-sm"
+          placeholder="Tu correo electrónico"
+        />
+        <div class="mt-4 sm:ml-4 sm:mt-0">
+          <button
+            type="submit"
+            class="flex w-full items-center justify-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+          >
+            Suscribirse
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Social + Copyright -->
+    <div class="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex gap-x-6 md:order-2">
+        <a
+          v-for="item in footerSocial"
+          :key="item.name"
+          :href="item.href"
+          class="text-gray-400 hover:text-gray-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="sr-only">{{ item.name }}</span>
+          <component :is="item.icon" class="size-6" aria-hidden="true" />
+        </a>
+      </div>
+      <p class="mt-8 text-sm text-gray-400 md:order-1 md:mt-0">
+        &copy; 2024 Transportes SCAR. Todos los derechos reservados.
+      </p>
+    </div>
   </div>
-      </footer>
+</footer>
+
+
+
+
   </div>
 </template>
 
