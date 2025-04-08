@@ -10,10 +10,8 @@
   <div class="bg-white">
     <!-- HEADER -->
     <header class="absolute inset-x-0 top-0 z-50">
-      <nav
-        class="mx-4 mt-4 flex items-center justify-between rounded-2xl bg-gray-900 p-4 shadow-lg lg:px-2 relative overflow-visible"
-        aria-label="Menú principal"
-      >
+      <nav class="mx-auto max-w-7xl px-6 lg:px-8 mt-4 flex items-center justify-between rounded-2xl bg-gray-900 p-4 shadow-lg relative overflow-visible" aria-label="Menú principal">
+
         <!-- Logo (alineado a la izquierda) -->
         <div class="flex items-center">
           <a href="#inicio" class="p-1" aria-label="Inicio">
@@ -137,40 +135,43 @@
     <!-- MAIN CONTENT -->
     <main>
       <!-- HERO SECTION -->
-      <section id="inicio" class="pt-20 sm:pt-30 pb-16 sm:pb-2 max-w-7xl mx-auto px-4 lg:px-4">
-        <div class="relative overflow-hidden rounded-2xl bg-gray-900 px-6 py-20 shadow-xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
-          <img
-            class="absolute inset-0 h-full w-full object-cover brightness-90 saturate-100"
-            src="/img/dashboard/truck.jpg"
-            alt="Camión en carretera"
-          />
-          <div class="absolute inset-0 bg-gray-900/60 mix-blend-multiply"></div>
-          <div class="relative mx-auto max-w-2xl text-center">
-            <h1 class="text-4xl font-bold tracking-tight text-white">
-              Llevamos tu carga a todo Chile
-            </h1>
-            <p class="mt-6 text-base sm:text-lg leading-7 text-gray-300">
-              Con más de 25 años de experiencia en transporte terrestre, Transportes SCAR garantiza seguridad, eficiencia y cumplimiento en cada ruta.
-            </p>
-            <div class="mt-10 flex justify-center gap-x-6">
-              <a
-                href="#sobre-nosotros"
-                class="rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
-                aria-label="Conócenos"
-              >
-                Conócenos
-              </a>
-              <a
-                href="#servicios"
-                class="text-sm font-semibold leading-6 text-white"
-                aria-label="Nuestros servicios"
-              >
-                Nuestros servicios <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
+<section id="inicio" class="pt-20 sm:pt-30 pb-16 sm:pb-2">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="relative overflow-hidden rounded-2xl bg-gray-900 px-6 py-20 shadow-xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
+      <img
+        class="absolute inset-0 h-full w-full object-cover brightness-90 saturate-100"
+        src="/img/dashboard/truck.jpg"
+        alt="Camión en carretera"
+      />
+      <div class="absolute inset-0 bg-gray-900/60 mix-blend-multiply"></div>
+      <div class="relative mx-auto max-w-2xl text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-white">
+          Llevamos tu carga a todo Chile
+        </h1>
+        <p class="mt-6 text-base sm:text-lg leading-7 text-gray-300">
+          Con más de 25 años de experiencia en transporte terrestre, Transportes SCAR garantiza seguridad, eficiencia y cumplimiento en cada ruta.
+        </p>
+        <div class="mt-10 flex justify-center gap-x-6">
+          <a
+            href="#sobre-nosotros"
+            class="rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+            aria-label="Conócenos"
+          >
+            Conócenos
+          </a>
+          <a
+            href="#servicios"
+            class="text-sm font-semibold leading-6 text-white"
+            aria-label="Nuestros servicios"
+          >
+            Nuestros servicios <span aria-hidden="true">→</span>
+          </a>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <!-- CLIENTES ACTUALIZADO -->
 <section id="clientes" class="bg-gray-50 pt-2 sm:pt-2 lg:pt-4 pb-8 sm:pb-10 lg:pb-10">
