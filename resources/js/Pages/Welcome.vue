@@ -304,54 +304,25 @@
 
       <!-- COMPROMISO Y ALIANZAS (incluye Educación y Bienestar) -->
       <section id="compromiso" class="bg-gray-50 py-12">
-  <div class="mx-auto max-w-4xl text-center">
-    <p class="text-4xl font-bold tracking-tight text-gray-900">
-      Compromiso y Alianzas
-    </p>
-    <p class="mt-4 text-lg text-gray-700 text-justify">
-      En Transportes SCAR trabajamos junto a nuestros clientes e instituciones estratégicas para cumplir con auditorías exigentes, fortalecer el cumplimiento normativo, mejorar continuamente nuestros procesos y promover la formación continua de nuestro equipo.
-    </p>
-  </div>
-  <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-6 lg:px-8">
-    
-    <!-- ACHS Virtual + Gestión -->
-    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition text-center">
-      <img src="/img/achs.png" alt="ACHS" class="mx-auto h-12 mb-4" loading="lazy" />
-      <p class="text-lg font-bold text-indigo-600">ACHS Virtual & Gestión</p>
-      <p class="mt-2 text-sm text-gray-700 text-justify">
-        Herramientas digitales de capacitación y gestión avanzada en seguridad y salud laboral, promoviendo el bienestar y cumplimiento normativo en toda la organización.
+    <div class="mx-auto max-w-4xl text-center">
+      <h2 class="text-4xl font-bold tracking-tight text-gray-900">
+        Compromiso y Alianzas
+      </h2>
+      <p class="mt-4 text-lg text-gray-700 text-justify">
+        En Transportes SCAR trabajamos junto a nuestros clientes e instituciones estratégicas para cumplir con auditorías exigentes, fortalecer el cumplimiento normativo, mejorar continuamente nuestros procesos y promover la formación continua de nuestro equipo.
       </p>
     </div>
 
-    <!-- Subcontralaley -->
-    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition text-center">
-      <img src="/img/subcontrataley.png" alt="Subcontralaley" class="mx-auto h-12 mb-4" loading="lazy" />
-      <p class="text-lg font-bold text-indigo-600">Subcontralaley</p>
-      <p class="mt-2 text-sm text-gray-700 text-justify">
-        Sistema de monitoreo y gestión para asegurar el cumplimiento normativo de trabajadores y empresas colaboradoras.
-      </p>
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-6 lg:px-8">
+      <FlashCard
+        v-for="(item, i) in items"
+        :key="i"
+        :title="item.title"
+        :description="item.description"
+        :image="item.image"
+      />
     </div>
-
-    <!-- Maquinaria para Construcción -->
-    <div class="bg-white rounded-lg shadow-md p-2 hover:shadow-lg transition text-center">
-      <img src="/img/santaema.jpeg" alt="Maquinaria para Construcción" class="mx-auto h-20 mb-0" loading="lazy" />
-      <p class="text-lg font-bold text-indigo-600">Maquinaria para Construcción</p>
-      <p class="mt-2 text-sm text-gray-700 text-justify">
-        Nos aliamos con empresas líderes en arriendo de maquinaria para asegurar operaciones eficientes y seguras.
-      </p>
-    </div>
-
-    <!-- Alianza con Transportes -->
-    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition text-center">
-      <img src="/img/al.jpeg" alt="Alianza con Transportes" class="mx-auto h-12 mb-4" loading="lazy" />
-      <p class="text-lg font-bold text-indigo-600">Alianza con Transportes</p>
-      <p class="mt-2 text-sm text-gray-700 text-justify">
-        Establecemos convenios con empresas de transporte para ampliar nuestra cobertura logística a lo largo del país.
-      </p>
-    </div>
-
-  </div>
-      </section>
+  </section>
 
       <!-- CTA SECTION -->
 <section class="relative isolate mt-0 px-6 py-0 sm:py-16 lg:px-8 bg-gray-900">
@@ -443,7 +414,7 @@
 <footer class="bg-gray-900">
   <div class="mx-auto max-w-7xl px-6 pb-8 pt-12 sm:pt-24 lg:px-8 lg:pt-16">
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-      <img class="h-16" src="/img/logoscar.png" alt="Transportes SCAR" />
+      <img class="h-32" src="/img/logoscar.png" alt="Transportes SCAR" />
       <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
@@ -558,7 +529,7 @@
         </a>
       </div>
       <p class="mt-8 text-sm text-gray-400 md:order-1 md:mt-0">
-        &copy; 2024 Transportes SCAR. Todos los derechos reservados.
+        &copy; 2025 Transportes SCAR. Todos los derechos reservados.
       </p>
     </div>
   </div>
@@ -690,6 +661,34 @@ defineProps({
 
 // Estado para el menú móvil
 const mobileMenuOpen = ref(false)
+import FlashCard from '@/Components/FlashCard.vue'
+
+const items = [
+  {
+    title: 'ACHS Virtual & Gestión',
+    description:
+      'Herramientas digitales de capacitación y gestión avanzada en seguridad y salud laboral, promoviendo el bienestar y cumplimiento normativo en toda la organización.',
+    image: '/img/achs.png',
+  },
+  {
+    title: 'Subcontralaley',
+    description:
+      'Sistema de monitoreo y gestión para asegurar el cumplimiento normativo de trabajadores y empresas colaboradoras.',
+    image: '/img/subcontrataley.png',
+  },
+  {
+    title: 'Maquinaria para Construcción',
+    description:
+      'Nos aliamos con empresas líderes en arriendo de maquinaria para asegurar operaciones eficientes y seguras.',
+    image: '/img/santaema.jpeg',
+  },
+  {
+    title: 'Alianza con Transportes',
+    description:
+      'Establecemos convenios con empresas de transporte para ampliar nuestra cobertura logística a lo largo del país.',
+    image: '/img/al.jpeg',
+  },
+]
 </script>
 
 
