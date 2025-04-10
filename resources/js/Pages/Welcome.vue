@@ -9,99 +9,99 @@
   </Head>
 
   <div class="bg-white">
-    <!-- HEADER -->
-<header class="fixed top-0 left-0 right-0 z-50 w-full bg-gray-900 shadow-lg">
-  <nav class="mx-auto flex items-center justify-between px-12 py-0 lg:px-8 max-w-7xl" aria-label="Menú principal">
+ <!-- HEADER -->
+ <header class="fixed top-0 left-0 right-0 z-50 w-full bg-gray-900 shadow-lg rounded-b-xl">
+      <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-2 lg:px-8" aria-label="Menú principal">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#inicio" class="block p-1" aria-label="Inicio">
+            <img class="h-12 w-auto" src="/img/scar.png" alt="Logo Transportes SCAR" />
+          </a>
+        </div>
+        <!-- Menú escritorio -->
+        <div class="hidden lg:flex lg:items-center lg:space-x-12">
+          <a href="#inicio" class="text-sm font-semibold text-white hover:text-indigo-300">Inicio</a>
+          <a href="#sobre-nosotros" class="text-sm font-semibold text-white hover:text-indigo-300">Sobre Nosotros</a>
+          <a href="#servicios" class="text-sm font-semibold text-white hover:text-indigo-300">Servicios</a>
+          <a href="#clientes" class="text-sm font-semibold text-white hover:text-indigo-300">Clientes</a>
+          <a href="#compromiso" class="text-sm font-semibold text-white hover:text-indigo-300">Compromiso</a>
+          <a href="#contacto" class="text-sm font-semibold text-white hover:text-indigo-300">Contacto</a>
+        </div>
+        <!-- Login / Register -->
+        <div class="hidden lg:flex lg:items-center lg:space-x-6" v-if="canLogin">
+          <Link
+            :href="route('login')"
+            class="text-sm font-semibold text-white hover:text-indigo-300"
+            aria-label="Ingresar"
+          >
+            Ingresar <span aria-hidden="true">→</span>
+          </Link>
+          <Link
+            v-if="canRegister"
+            :href="route('register')"
+            class="text-sm font-semibold text-white hover:text-indigo-300"
+            aria-label="Registrar"
+          >
+            Registrar <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+        <!-- Botón móvil -->
+        <div class="lg:hidden">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center rounded-md p-2 text-white"
+            @click="mobileMenuOpen = true"
+            aria-label="Abrir menú"
+          >
+            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+          </button>
+        </div>
+      </nav>
 
-    <!-- Logo -->
-    <div class="flex items-center">
-      <a href="#inicio" class="p-1" aria-label="Inicio">
-        <span class="sr-only">Transportes SCAR</span>
-        <img class="h-12 w-auto" src="img/logoscar.png" alt="Logo de Transportes SCAR" />
-      </a>
-    </div>
-
-    <!-- Menú móvil -->
-    <div class="flex lg:hidden">
-      <button
-        type="button"
-        class="inline-flex items-center justify-center rounded-md p-2.5 text-white"
-        @click="mobileMenuOpen = true"
-        aria-label="Abrir menú"
-      >
-        <Bars3Icon class="h-6 w-6" aria-hidden="true" />
-      </button>
-    </div>
-
-    <!-- Navegación escritorio -->
-    <div class="hidden lg:flex lg:gap-x-10">
-      <a
-        v-for="item in navigation"
-        :key="item.name"
-        :href="item.href"
-        class="text-sm font-semibold text-white hover:text-indigo-300"
-      >
-        {{ item.name }}
-      </a>
-    </div>
-
-    <!-- Botones Login/Register -->
-    <div class="hidden lg:flex lg:flex-1 lg:justify-end space-x-4" v-if="canLogin">
-      <Link
-        :href="route('login')"
-        class="text-sm font-semibold text-white hover:text-indigo-300"
-        aria-label="Ingresar"
-      >
-        Ingresar <span aria-hidden="true">&rarr;</span>
-      </Link>
-      <Link
-        v-if="canRegister"
-        :href="route('register')"
-        class="text-sm font-semibold text-white hover:text-indigo-300"
-        aria-label="Registrar"
-      >
-        Registrar <span aria-hidden="true">&rarr;</span>
-      </Link>
-    </div>
-  </nav>
-
-  <!-- MENÚ MÓVIL -->
-  <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
-    <div class="fixed inset-0 z-40 bg-black/25" aria-hidden="true"></div>
-    <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-y-auto bg-gray-900 px-6 py-6 sm:ring-1 sm:ring-white/10">
-      <div class="flex items-center justify-between">
-        <a href="#inicio" class="p-1" aria-label="Inicio">
-          <img class="h-10 w-auto" src="img/logoscar.png" alt="Logo de Transportes SCAR" />
-        </a>
-        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-400" @click="mobileMenuOpen = false" aria-label="Cerrar menú">
-          <XMarkIcon class="h-6 w-6" aria-hidden="true" />
-        </button>
-      </div>
-      <div class="mt-6 flow-root">
-        <div class="-my-6 divide-y divide-gray-500/25">
-          <div class="space-y-2 py-6">
-            <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-800">
+      <!-- Menú móvil -->
+      <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
+        <div class="fixed inset-0 z-40 bg-black/25" aria-hidden="true"></div>
+        <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-y-auto bg-gray-900 px-6 py-6">
+          <div class="flex items-center justify-between">
+            <a href="#inicio" class="block p-1" aria-label="Inicio">
+              <img class="h-10 w-auto" src="/img/logoscar.png" alt="Logo Transportes SCAR" />
+            </a>
+            <button type="button" class="p-1 text-gray-400" @click="mobileMenuOpen = false" aria-label="Cerrar menú">
+              <XMarkIcon class="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div class="mt-6 space-y-4">
+            <a
+              v-for="item in navigation"
+              :key="item.name"
+              :href="item.href"
+              class="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-800"
+            >
               {{ item.name }}
             </a>
+            <div class="pt-4 border-t border-gray-700">
+              <Link v-if="canLogin" :href="route('login')" class="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-800">
+                Ingresar
+              </Link>
+              <Link
+                v-if="canRegister"
+                :href="route('register')"
+                class="mt-2 block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-800"
+              >
+                Registrar
+              </Link>
+            </div>
           </div>
-          <div class="py-6">
-            <Link v-if="canLogin" :href="route('login')" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-white hover:bg-gray-800">
-              Ingresar
-            </Link>
-            <Link v-if="canRegister" :href="route('register')" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-white hover:bg-gray-800">
-              Registrar
-            </Link>
-          </div>
-        </div>
-      </div>
-    </DialogPanel>
-  </Dialog>
-</header>
+        </DialogPanel>
+      </Dialog>
+    </header>
+
     <!-- MAIN CONTENT -->
     <main>
       <!-- HERO SECTION -->
-      <section id="inicio" class="relative pt-20 sm:pt-2 pb-16 sm:pb-2">
-  <div class="relative h-[90vh] overflow-hidden bg-fixed bg-center bg-cover" style="background-image: url('/img/dashboard/truck.jpg');">
+      <section id="inicio" class="relative pt-0 sm:pt-2 pb-16 sm:pb-2">
+        <div class="relative h-[75vh] overflow-hidden bg-fixed bg-cover" style="background-image: url('/img/dashboard/truck.jpg'); background-position: center top;">
+
     <div class="absolute inset-0 bg-gray-900/60 mix-blend-multiply"></div>
     <div class="relative z-10 flex flex-col justify-center items-center h-full text-center px-6">
       <h1 class="text-4xl font-bold tracking-tight text-white">
@@ -122,9 +122,8 @@
   </div>
 </section>
 
-
       <!-- CLIENTES ACTUALIZADO -->
-<section id="clientes" class="bg-gray-50 pt-2 sm:pt-2 lg:pt-4 pb-8 sm:pb-10 lg:pb-10">
+<section id="clientes" class="bg-gray-50 pt-2 sm:pt-2 lg:pt-8 pb-8 sm:pb-10 lg:pb-10">
   <div class="max-w-7xl mx-auto px-0 py-0 lg:px-20">
     <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-center">
 
@@ -182,9 +181,8 @@
   </div>
 </section>
 
-
       <!-- PANORAMA LOGÍSTICO -->
-      <section id="panorama-logistico" class="bg-white py-6">
+      <section id="panorama-logistico" class="bg-white py-12">
   <div class="mx-auto max-w-4xl text-center">
     <p class="text-4xl font-bold tracking-tight text-gray-900">
       Panorama Logístico
@@ -215,7 +213,7 @@
       </section>
 
       <!-- SOBRE NOSOTROS -->
-      <section id="sobre-nosotros" class="bg-gray-100 py-12">
+      <section id="sobre-nosotros" class="bg-gray-100 py-16">
   <div class="mx-auto max-w-4xl text-center">
     <p class="text-4xl font-bold tracking-tight text-gray-900">
       Sobre Nosotros
@@ -230,7 +228,7 @@
       </section>
 
       <!-- NUESTROS SERVICIOS -->
-      <section id="servicios" class="bg-white py-12">
+      <section id="servicios" class="bg-white py-16">
   <div class="mx-auto max-w-4xl text-center">
     <p class="text-4xl font-bold tracking-tight text-gray-900">
       Nuestro Servicio
@@ -251,7 +249,7 @@
       </section>
 
       <!-- COMPROMISO Y ALIANZAS (incluye Educación y Bienestar) -->
-      <section id="compromiso" class="bg-gray-50 py-12">
+      <section id="compromiso" class="bg-gray-50 py-16">
     <div class="mx-auto max-w-4xl text-center">
       <h2 class="text-4xl font-bold tracking-tight text-gray-900">
         Compromiso y Alianzas
@@ -273,7 +271,8 @@
   </section>
 
       <!-- CTA SECTION -->
-<section class="relative isolate mt-0 px-6 py-0 sm:py-16 lg:px-8 bg-gray-900">
+<section id="contacto"  class="relative isolate mt-0 px-6 py-6 sm:py-16 lg:px-8 bg-gray-900">
+
   <svg
     class="absolute inset-0 -z-10 w-full h-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
     aria-hidden="true"
@@ -627,7 +626,7 @@ const items = [
     title: 'Maquinaria para Construcción',
     description:
       'Nos aliamos con empresas líderes en arriendo de maquinaria para asegurar operaciones eficientes y seguras.',
-    image: '/img/santaema.jpeg',
+    image: '/img/santaema.png',
   },
   {
     title: 'Alianza con Transportes',
