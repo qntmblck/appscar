@@ -11,7 +11,7 @@
   <div class="bg-white">
     <!-- HEADER -->
 <header class="fixed top-0 left-0 right-0 z-50 w-full bg-gray-900 shadow-lg">
-  <nav class="mx-auto flex items-center justify-between px-6 py-0 lg:px-8 max-w-7xl" aria-label="Menú principal">
+  <nav class="mx-auto flex items-center justify-between px-12 py-0 lg:px-8 max-w-7xl" aria-label="Menú principal">
 
     <!-- Logo -->
     <div class="flex items-center">
