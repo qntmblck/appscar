@@ -15,7 +15,7 @@
         <!-- Logo -->
         <div class="flex-shrink-0">
           <a href="#inicio" class="block p-1" aria-label="Inicio">
-            <img class="h-12 w-auto" src="/img/scar.png" alt="Logo Transportes SCAR" />
+            <img class="h-12 w-auto" src="/img/scar.png?v=2" alt="Logo Transportes SCAR" />
           </a>
         </div>
         <!-- Menú escritorio -->
@@ -64,7 +64,7 @@
         <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-y-auto bg-gray-900 px-6 py-6">
           <div class="flex items-center justify-between">
             <a href="#inicio" class="block p-1" aria-label="Inicio">
-              <img class="h-10 w-auto" src="/img/scar3.png" alt="Logo Transportes SCAR" />
+              <img class="h-10 w-auto" src="/img/scar3.png?v=2" alt="Logo Transportes SCAR" />
             </a>
             <button type="button" class="p-1 text-gray-400" @click="mobileMenuOpen = false" aria-label="Cerrar menú">
               <XMarkIcon class="h-6 w-6" aria-hidden="true" />
