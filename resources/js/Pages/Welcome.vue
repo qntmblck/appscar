@@ -632,7 +632,7 @@ const items = [
     title: 'Alianza con Transportes',
     description:
       'Establecemos convenios con empresas de transporte para ampliar nuestra cobertura logística a lo largo del país.',
-    image: '/img/al.jpeg',
+    image: '/img/al.jpeg?v=2',
   },
 ]
 </script>
