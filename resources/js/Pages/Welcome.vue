@@ -64,7 +64,7 @@
         <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-y-auto bg-gray-900 px-6 py-6">
           <div class="flex items-center justify-between">
             <a href="#inicio" class="block p-1" aria-label="Inicio">
-              <img class="h-10 w-auto" src="/img/scar3.png" alt="Logo Transportes SCAR" />
+              <img class="h-10 w-auto" src="/img/scar3.png=?v=3" alt="Logo Transportes SCAR" />
             </a>
             <button type="button" class="p-1 text-gray-400" @click="mobileMenuOpen = false" aria-label="Cerrar menú">
               <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -360,7 +360,7 @@
 <footer class="bg-gray-900">
   <div class="mx-auto max-w-7xl px-6 pb-8 pt-12 sm:pt-24 lg:px-8 lg:pt-16">
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-      <img class="h-32" src="/img/logoscar.png" alt="Transportes SCAR" />
+      <img class="h-32" src="/img/logoscar.png'=v2" alt="Transportes SCAR" />
       <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
